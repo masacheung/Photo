@@ -1,0 +1,12 @@
++-------------------------------+
+|    Window	|     Member	|
+|---------------|---------------|
+|Login Screen	|Marc		|
+|Admin Home	|Marc		|
+|Non-Admin	|Masa		|
+|Add User	|Marc		|
+|Delete User	|Marc		|
+|New Album	|Masa		|
+|File Chooser	|Masa		|
+|Album Content	|Marc		|
++-------------------------------+

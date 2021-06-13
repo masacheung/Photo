@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Julia Sutula and Corentin Rejaud -->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.PhotoController">
+   <children>
+      <GridPane layoutX="316.0" layoutY="50.0" prefHeight="110.0" prefWidth="267.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="132.0" minWidth="10.0" prefWidth="90.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="184.0" minWidth="10.0" prefWidth="184.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="60.0" minHeight="0.0" prefHeight="60.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="91.0" minHeight="10.0" prefHeight="61.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="91.0" minHeight="10.0" prefHeight="61.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Album Name :" wrappingWidth="82.697265625" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Photo Data :" GridPane.rowIndex="1" />
+            <Text fx:id="album_name" strokeType="OUTSIDE" strokeWidth="0.0" text="Marc's Album" GridPane.columnIndex="1" />
+            <Text fx:id="created_date" strokeType="OUTSIDE" strokeWidth="0.0" text="1-1-2019" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Caption:" GridPane.rowIndex="2" />
+            <TextField fx:id="cap" onAction="#addcap" prefHeight="0.0" prefWidth="24.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#addcap" prefHeight="25.0" prefWidth="29.0" text="+" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <MenuBar prefHeight="29.0" prefWidth="600.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="Menu">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#save" text="Save" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#logout" text="Logout" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <Button layoutX="61.0" layoutY="315.0" mnemonicParsing="false" onAction="#pre" text="&lt;" />
+      <Button layoutX="205.0" layoutY="315.0" mnemonicParsing="false" onAction="#next" text="&gt;" />
+      <ImageView fx:id="pic_display" fitHeight="253.0" fitWidth="267.0" layoutX="26.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+      <Button layoutX="509.0" layoutY="175.0" mnemonicParsing="false" onAction="#addtag" prefHeight="25.0" prefWidth="73.0" text="Add Tag" />
+      <TextField fx:id="tagn" layoutX="313.0" layoutY="175.0" prefHeight="25.0" prefWidth="73.0" promptText="Tag name" />
+      <TextField fx:id="tagv" layoutX="411.0" layoutY="175.0" prefHeight="25.0" prefWidth="66.0" promptText="Tag Value" />
+      <ListView fx:id="tag_list" layoutX="313.0" layoutY="303.0" prefHeight="49.0" prefWidth="267.0" />
+      <Text layoutX="427.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tags" />
+      <Button layoutX="398.0" layoutY="361.0" mnemonicParsing="false" onAction="#removetag" text="Remove Tag" />
+      <Button layoutX="477.0" layoutY="241.0" mnemonicParsing="false" onAction="#copy" text="Copy" />
+      <Button layoutX="538.0" layoutY="241.0" mnemonicParsing="false" onAction="#move" text="Move" />
+      <ChoiceBox fx:id="album_D" layoutX="311.0" layoutY="241.0" prefWidth="150.0" />
+      <Text layoutX="316.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Destination :" />
+   </children>
+</AnchorPane>
